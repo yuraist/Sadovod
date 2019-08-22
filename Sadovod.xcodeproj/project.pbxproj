@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFD5230EA0490073A017 /* Constants.swift */; };
+		BE8ACFDC230EB6160073A017 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFDB230EB6160073A017 /* APIClient.swift */; };
+		BE8ACFDF230EB73D0073A017 /* Extensions+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */; };
+		BE8ACFE3230EB7A70073A017 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFE2230EB7A70073A017 /* RequestMethod.swift */; };
+		BE8ACFE5230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFE4230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift */; };
 		BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4952F230E9D2F00625872 /* AppDelegate.swift */; };
 		BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC49531230E9D2F00625872 /* MainTabBarVC.swift */; };
 		BEC49537230E9D3100625872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC49536230E9D3100625872 /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		BE8ACFD5230EA0490073A017 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE8ACFDB230EB6160073A017 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+URLRequest.swift"; sourceTree = "<group>"; };
+		BE8ACFE2230EB7A70073A017 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		BE8ACFE4230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+URLSessionDataTask.swift"; sourceTree = "<group>"; };
 		BEC4952C230E9D2F00625872 /* Sadovod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sadovod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC4952F230E9D2F00625872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC49531230E9D2F00625872 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 		BE8ACFD9230EA0BA0073A017 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE8ACFE2230EB7A70073A017 /* RequestMethod.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -85,6 +94,31 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BE8ACFDD230EB62D0073A017 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				BE8ACFDB230EB6160073A017 /* APIClient.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		BE8ACFE0230EB7420073A017 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE8ACFE1230EB7470073A017 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BE8ACFE1230EB7470073A017 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */,
+				BE8ACFE4230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BEC49523230E9D2F00625872 = {
@@ -156,6 +190,8 @@
 				BE8ACFD9230EA0BA0073A017 /* Models */,
 				BE8ACFDA230EA0C50073A017 /* Views */,
 				BEC49550230E9E4B00625872 /* ViewControllers */,
+				BE8ACFDD230EB62D0073A017 /* Server */,
+				BE8ACFE0230EB7420073A017 /* Helpers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -262,7 +298,11 @@
 			files = (
 				BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */,
 				BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */,
+				BE8ACFE3230EB7A70073A017 /* RequestMethod.swift in Sources */,
 				BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */,
+				BE8ACFE5230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift in Sources */,
+				BE8ACFDC230EB6160073A017 /* APIClient.swift in Sources */,
+				BE8ACFDF230EB73D0073A017 /* Extensions+URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
