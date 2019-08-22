@@ -11,6 +11,7 @@ import Foundation
 extension URLSessionDataTask {
   
   static func createDataTask(forPath path: String, queryItems items: [String: String], method: RequestMethod, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    
     let request = URLRequest.getRequest(forPath: path, queryItems: items, method: method)
     let dataTask = URLSession(configuration: .default).dataTask(with: request, completionHandler: completion)
     return dataTask

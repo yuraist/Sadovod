@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  Endpoint.swift
 //  Sadovod
 //
 //  Created by Yura Istomin on 22/08/2019.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct Constants {
+enum Endpoint {
   
-  static let baseUrl = "tk-sad.ru/api"
-  static let scheme = "https"
+  static let checkToken = "/abpro/check_keys"
   
 }
