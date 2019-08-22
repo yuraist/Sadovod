@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFD5230EA0490073A017 /* Constants.swift */; };
 		BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4952F230E9D2F00625872 /* AppDelegate.swift */; };
 		BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC49531230E9D2F00625872 /* MainTabBarVC.swift */; };
 		BEC49537230E9D3100625872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC49536230E9D3100625872 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE8ACFD5230EA0490073A017 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BEC4952C230E9D2F00625872 /* Sadovod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sadovod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC4952F230E9D2F00625872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC49531230E9D2F00625872 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
@@ -54,6 +56,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE8ACFD7230EA0570073A017 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BE8ACFD5230EA0490073A017 /* Constants.swift */,
+				BEC4953B230E9D3100625872 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		BE8ACFD8230EA0610073A017 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BEC49538230E9D3100625872 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BE8ACFD9230EA0BA0073A017 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE8ACFDA230EA0C50073A017 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BEC49523230E9D2F00625872 = {
 			isa = PBXGroup;
 			children = (
@@ -90,28 +123,28 @@
 			path = SadovodTests;
 			sourceTree = "<group>";
 		};
-		BEC4954F230E9E3E00625872 /* Application Delegate */ = {
+		BEC4954F230E9E3E00625872 /* ApplicationDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				BEC4952F230E9D2F00625872 /* AppDelegate.swift */,
 			);
-			path = "Application Delegate";
+			path = ApplicationDelegate;
 			sourceTree = "<group>";
 		};
-		BEC49550230E9E4B00625872 /* Controller */ = {
+		BEC49550230E9E4B00625872 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BEC49531230E9D2F00625872 /* MainTabBarVC.swift */,
 			);
-			path = Controller;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BEC49551230E9E5600625872 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				BEC49536230E9D3100625872 /* Assets.xcassets */,
-				BEC49538230E9D3100625872 /* LaunchScreen.storyboard */,
-				BEC4953B230E9D3100625872 /* Info.plist */,
+				BE8ACFD8230EA0610073A017 /* Storyboards */,
+				BE8ACFD7230EA0570073A017 /* Config */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -119,8 +152,10 @@
 		BEC49552230E9E7200625872 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BEC4954F230E9E3E00625872 /* Application Delegate */,
-				BEC49550230E9E4B00625872 /* Controller */,
+				BEC4954F230E9E3E00625872 /* ApplicationDelegate */,
+				BE8ACFD9230EA0BA0073A017 /* Models */,
+				BE8ACFDA230EA0C50073A017 /* Views */,
+				BEC49550230E9E4B00625872 /* ViewControllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -227,6 +262,7 @@
 			files = (
 				BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */,
 				BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */,
+				BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3PAQGAXUV;
-				INFOPLIST_FILE = "$(SRCROOT)/Sadovod/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sadovod/Resources/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,7 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3PAQGAXUV;
-				INFOPLIST_FILE = "$(SRCROOT)/Sadovod/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sadovod/Resources/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
