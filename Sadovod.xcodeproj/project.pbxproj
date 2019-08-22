@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4952F230E9D2F00625872 /* AppDelegate.swift */; };
+		BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC49531230E9D2F00625872 /* MainTabBarVC.swift */; };
+		BEC49537230E9D3100625872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC49536230E9D3100625872 /* Assets.xcassets */; };
+		BEC4953A230E9D3100625872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC49538230E9D3100625872 /* LaunchScreen.storyboard */; };
+		BEC49545230E9D3100625872 /* SadovodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC49544230E9D3100625872 /* SadovodTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEC49541230E9D3100625872 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEC49524230E9D2F00625872 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEC4952B230E9D2F00625872;
+			remoteInfo = Sadovod;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEC4952C230E9D2F00625872 /* Sadovod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sadovod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC4952F230E9D2F00625872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEC49531230E9D2F00625872 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		BEC49536230E9D3100625872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEC49539230E9D3100625872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEC4953B230E9D3100625872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC49540230E9D3100625872 /* SadovodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadovodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC49544230E9D3100625872 /* SadovodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadovodTests.swift; sourceTree = "<group>"; };
+		BEC49546230E9D3100625872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEC49529230E9D2F00625872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC4953D230E9D3100625872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEC49523230E9D2F00625872 = {
+			isa = PBXGroup;
+			children = (
+				BEC4952E230E9D2F00625872 /* Sadovod */,
+				BEC49543230E9D3100625872 /* SadovodTests */,
+				BEC4952D230E9D2F00625872 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEC4952D230E9D2F00625872 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEC4952C230E9D2F00625872 /* Sadovod.app */,
+				BEC49540230E9D3100625872 /* SadovodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC4952E230E9D2F00625872 /* Sadovod */ = {
+			isa = PBXGroup;
+			children = (
+				BEC49552230E9E7200625872 /* Sources */,
+				BEC49551230E9E5600625872 /* Resources */,
+			);
+			path = Sadovod;
+			sourceTree = "<group>";
+		};
+		BEC49543230E9D3100625872 /* SadovodTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEC49544230E9D3100625872 /* SadovodTests.swift */,
+				BEC49546230E9D3100625872 /* Info.plist */,
+			);
+			path = SadovodTests;
+			sourceTree = "<group>";
+		};
+		BEC4954F230E9E3E00625872 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BEC4952F230E9D2F00625872 /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		BEC49550230E9E4B00625872 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEC49531230E9D2F00625872 /* MainTabBarVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BEC49551230E9E5600625872 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEC49536230E9D3100625872 /* Assets.xcassets */,
+				BEC49538230E9D3100625872 /* LaunchScreen.storyboard */,
+				BEC4953B230E9D3100625872 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEC49552230E9E7200625872 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BEC4954F230E9E3E00625872 /* Application Delegate */,
+				BEC49550230E9E4B00625872 /* Controller */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEC4952B230E9D2F00625872 /* Sadovod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC49549230E9D3100625872 /* Build configuration list for PBXNativeTarget "Sadovod" */;
+			buildPhases = (
+				BEC49528230E9D2F00625872 /* Sources */,
+				BEC49529230E9D2F00625872 /* Frameworks */,
+				BEC4952A230E9D2F00625872 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sadovod;
+			productName = Sadovod;
+			productReference = BEC4952C230E9D2F00625872 /* Sadovod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEC4953F230E9D3100625872 /* SadovodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC4954C230E9D3100625872 /* Build configuration list for PBXNativeTarget "SadovodTests" */;
+			buildPhases = (
+				BEC4953C230E9D3100625872 /* Sources */,
+				BEC4953D230E9D3100625872 /* Frameworks */,
+				BEC4953E230E9D3100625872 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEC49542230E9D3100625872 /* PBXTargetDependency */,
+			);
+			name = SadovodTests;
+			productName = SadovodTests;
+			productReference = BEC49540230E9D3100625872 /* SadovodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEC49524230E9D2F00625872 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Yura Istomin";
+				TargetAttributes = {
+					BEC4952B230E9D2F00625872 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					BEC4953F230E9D3100625872 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = BEC4952B230E9D2F00625872;
+					};
+				};
+			};
+			buildConfigurationList = BEC49527230E9D2F00625872 /* Build configuration list for PBXProject "Sadovod" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEC49523230E9D2F00625872;
+			productRefGroup = BEC4952D230E9D2F00625872 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEC4952B230E9D2F00625872 /* Sadovod */,
+				BEC4953F230E9D3100625872 /* SadovodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEC4952A230E9D2F00625872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC4953A230E9D3100625872 /* LaunchScreen.storyboard in Resources */,
+				BEC49537230E9D3100625872 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC4953E230E9D3100625872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEC49528230E9D2F00625872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */,
+				BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC4953C230E9D3100625872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC49545230E9D3100625872 /* SadovodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEC49542230E9D3100625872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEC4952B230E9D2F00625872 /* Sadovod */;
+			targetProxy = BEC49541230E9D3100625872 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEC49538230E9D3100625872 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEC49539230E9D3100625872 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEC49547230E9D3100625872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEC49548230E9D3100625872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEC4954A230E9D3100625872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PAQGAXUV;
+				INFOPLIST_FILE = "$(SRCROOT)/Sadovod/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuraist.Sadovod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEC4954B230E9D3100625872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PAQGAXUV;
+				INFOPLIST_FILE = "$(SRCROOT)/Sadovod/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuraist.Sadovod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEC4954D230E9D3100625872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PAQGAXUV;
+				INFOPLIST_FILE = SadovodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuraist.SadovodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sadovod.app/Sadovod";
+			};
+			name = Debug;
+		};
+		BEC4954E230E9D3100625872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PAQGAXUV;
+				INFOPLIST_FILE = SadovodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuraist.SadovodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sadovod.app/Sadovod";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEC49527230E9D2F00625872 /* Build configuration list for PBXProject "Sadovod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC49547230E9D3100625872 /* Debug */,
+				BEC49548230E9D3100625872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC49549230E9D3100625872 /* Build configuration list for PBXNativeTarget "Sadovod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC4954A230E9D3100625872 /* Debug */,
+				BEC4954B230E9D3100625872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC4954C230E9D3100625872 /* Build configuration list for PBXNativeTarget "SadovodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC4954D230E9D3100625872 /* Debug */,
+				BEC4954E230E9D3100625872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEC49524230E9D2F00625872 /* Project object */;
+}
