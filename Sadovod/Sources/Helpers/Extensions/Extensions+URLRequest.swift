@@ -15,7 +15,7 @@ extension URLRequest {
     var urlComponents = URLComponents()
     urlComponents.scheme = Constants.scheme
     urlComponents.host = Constants.baseUrl
-    urlComponents.path = path
+    urlComponents.path = Endpoint.urlPrefix + path
     
     urlComponents.queryItems = items.map { URLQueryItem(name: $0, value: $1) }
     
