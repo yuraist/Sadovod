@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
   
-  static let baseUrl = "tk-sad.ru/api"
+  static let baseUrl = "tk-sad.ru"
   static let scheme = "https"
   
 }
