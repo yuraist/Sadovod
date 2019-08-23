@@ -18,6 +18,9 @@
 		BEC49537230E9D3100625872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC49536230E9D3100625872 /* Assets.xcassets */; };
 		BEC4953A230E9D3100625872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC49538230E9D3100625872 /* LaunchScreen.storyboard */; };
 		BEC49545230E9D3100625872 /* SadovodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC49544230E9D3100625872 /* SadovodTests.swift */; };
+		BEDCF97E23104EDF006BA5AA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCF97D23104EDF006BA5AA /* Token.swift */; };
+		BEDCF98023104FA0006BA5AA /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCF97F23104FA0006BA5AA /* ServerError.swift */; };
+		BEDCF9822310547F006BA5AA /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCF9812310547F006BA5AA /* APIClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		BEC49540230E9D3100625872 /* SadovodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadovodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC49544230E9D3100625872 /* SadovodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadovodTests.swift; sourceTree = "<group>"; };
 		BEC49546230E9D3100625872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDCF97D23104EDF006BA5AA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		BEDCF97F23104FA0006BA5AA /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		BEDCF9812310547F006BA5AA /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 			children = (
 				BE8ACFE2230EB7A70073A017 /* RequestMethod.swift */,
 				BE8ACFE6230EBBB70073A017 /* Endpoint.swift */,
+				BEDCF97D23104EDF006BA5AA /* Token.swift */,
+				BEDCF97F23104FA0006BA5AA /* ServerError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC49544230E9D3100625872 /* SadovodTests.swift */,
+				BEDCF9812310547F006BA5AA /* APIClientTests.swift */,
 				BEC49546230E9D3100625872 /* Info.plist */,
 			);
 			path = SadovodTests;
@@ -299,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDCF97E23104EDF006BA5AA /* Token.swift in Sources */,
 				BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */,
 				BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */,
 				BE8ACFE7230EBBB70073A017 /* Endpoint.swift in Sources */,
 				BE8ACFE3230EB7A70073A017 /* RequestMethod.swift in Sources */,
+				BEDCF98023104FA0006BA5AA /* ServerError.swift in Sources */,
 				BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */,
 				BE8ACFE5230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift in Sources */,
 				BE8ACFDC230EB6160073A017 /* APIClient.swift in Sources */,
@@ -315,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC49545230E9D3100625872 /* SadovodTests.swift in Sources */,
+				BEDCF9822310547F006BA5AA /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
