@@ -10,6 +10,8 @@ import Foundation
 
 enum Endpoint {
   
-  static let checkToken = "/abpro/check_keys"
+  static let urlPrefix = "/abpro"
+  
+  static let checkToken = "/check_keys"
   
 }
