@@ -11,10 +11,20 @@ import XCTest
 
 class APIClientTests: XCTestCase {
   
+  var client: APIClient!
+  
+  override func setUp() {
+    client = APIClient.shared
+    Token.shared = Token(catalogKey: TestData.token, superKey: nil)
+  }
+  
+  override func tearDown() {
+    client = nil
+  }
+  
   func testAPIClient_checkToken_returnsValidToken() {
     // given
     let promise = expectation(description: "Get a valid token")
-    let client = APIClient.shared
     var token: Token?
     
     // when
@@ -34,11 +44,28 @@ class APIClientTests: XCTestCase {
     XCTAssertNotNil(token)
   }
   
-  func testAPIClient_fetchCategoryList_returnsCategoryList() {
+  func testAPIClient_authUser_authorizesSuccessfully() {
+    let promise = expectation(description: "Authorized user")
+    var authorizationResponse: AuthorizationResponse?
     
-    Token.shared = Token(catalogKey: TestData.token, superKey: nil)
+    client.authorize(login: TestData.email, password: TestData.password) { (result) in
+      switch result {
+      case .success(let response):
+        print(response)
+        authorizationResponse = response
+      case .failure(let error):
+        print(error.message)
+      }
+      
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(authorizationResponse)
+  }
+  
+  func testAPIClient_fetchCategoryList_returnsCategoryList() {
     let promise = expectation(description: "Category list")
-    let client = APIClient.shared
     var categoryList: [ProductCategory]?
     
     client.fetchCategoryList { (result) in
