@@ -10,6 +10,8 @@ import Foundation
 
 struct Token: Codable {
   
+  static var shared = Token(catalogKey: "", superKey: nil)
+  
   var catalogKey: String
   var superKey: String?
   
