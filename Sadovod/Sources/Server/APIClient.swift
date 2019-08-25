@@ -78,7 +78,7 @@ extension APIClient {
   }
   
   func fetchCategoryList(completion: @escaping ((Result<[ProductCategory], ServerError>) -> Void)) {
-    let queryItems = ["token": Token.shared.catalogKey, "appname": "Sadovod"]
+    let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": "0"]
     
     URLSessionDataTask.createDataTask(forPath: Endpoint.categoryList, queryItems: queryItems) { (data, _, error) in
       if let error = error {
