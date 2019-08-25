@@ -34,4 +34,26 @@ class APIClientTests: XCTestCase {
     XCTAssertNotNil(token)
   }
   
+  func testAPIClient_fetchCategoryList_returnsCategoryList() {
+    
+    Token.shared = Token(catalogKey: "TKOtFqgbFYLbmWepjfAoArqs71164169", superKey: nil)
+    let promise = expectation(description: "Category list")
+    let client = APIClient.shared
+    var categoryList: [ProductCategory]?
+    
+    client.fetchCategoryList { (result) in
+      switch result {
+      case .success(let response):
+        print(response)
+        categoryList = response
+      case .failure(let error):
+        print(error.message)
+      }
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(categoryList)
+  }
+  
 }
