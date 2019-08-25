@@ -36,7 +36,7 @@ class APIClientTests: XCTestCase {
   
   func testAPIClient_fetchCategoryList_returnsCategoryList() {
     
-    Token.shared = Token(catalogKey: "TKOtFqgbFYLbmWepjfAoArqs71164169", superKey: nil)
+    Token.shared = Token(catalogKey: TestData.token, superKey: nil)
     let promise = expectation(description: "Category list")
     let client = APIClient.shared
     var categoryList: [ProductCategory]?
