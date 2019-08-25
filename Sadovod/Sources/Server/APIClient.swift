@@ -10,9 +10,11 @@ import Foundation
 
 class APIClient {
   
+  typealias CompletionHandler<T> = (Result<T, ServerError>) -> Void
+  
   static let shared = APIClient()
   
-  fileprivate func fetchEntity<T: Codable>(fromEndpoint endpoint: String, queryItems: [String: String], completion: @escaping ((Result<T, ServerError>) -> Void)) {
+  fileprivate func fetchEntity<T: Codable>(fromEndpoint endpoint: String, queryItems: [String: String], completion: @escaping CompletionHandler<T>) {
     URLSessionDataTask.createDataTask(forPath: endpoint, queryItems: queryItems) { (data, _, error) in
       if let error = error {
         completion(.failure(ServerError(message: error.localizedDescription)))
@@ -40,7 +42,7 @@ class APIClient {
       }.resume()
   }
   
-  fileprivate func fetchEntityList<T: Codable>(fromEndpoint endpoint: String, queryItems: [String: String], completion: @escaping ((Result<[T], ServerError>) -> Void)) {
+  fileprivate func fetchEntityList<T: Codable>(fromEndpoint endpoint: String, queryItems: [String: String], completion: @escaping CompletionHandler<[T]>) {
     URLSessionDataTask.createDataTask(forPath: endpoint, queryItems: queryItems) { (data, _, error) in
       if let error = error {
         completion(.failure(ServerError(message: error.localizedDescription)))
@@ -73,12 +75,12 @@ class APIClient {
 
 extension APIClient {
   
-  func checkToken(catalogKey: String, superKey: String = "", completion: @escaping ((Result<Token, ServerError>) -> Void)) {
+  func checkToken(catalogKey: String, superKey: String = "", completion: @escaping CompletionHandler<Token>) {
     let queryItems = ["catalog_key": catalogKey, "super_key": superKey]
     fetchEntity(fromEndpoint: Endpoint.checkToken, queryItems: queryItems, completion: completion)
   }
   
-  func fetchCategoryList(completion: @escaping ((Result<[ProductCategory], ServerError>) -> Void)) {
+  func fetchCategoryList(completion: @escaping CompletionHandler<[ProductCategory]>) {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": "0"]
     fetchEntityList(fromEndpoint: Endpoint.categoryList, queryItems: queryItems, completion: completion)
   }
