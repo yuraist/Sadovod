@@ -80,32 +80,7 @@ extension APIClient {
   func fetchCategoryList(completion: @escaping ((Result<[ProductCategory], ServerError>) -> Void)) {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": "0"]
     
-    URLSessionDataTask.createDataTask(forPath: Endpoint.categoryList, queryItems: queryItems) { (data, _, error) in
-      if let error = error {
-        completion(.failure(ServerError(message: error.localizedDescription)))
-        return
-      }
-      
-      guard let data = data else {
-        completion(.failure(ServerError(message: "No data in response")))
-        return
-      }
-      
-      do {
-        let categoryList = try JSONDecoder().decode(EntityList<ProductCategory>.self, from: data)
-        completion(.success(categoryList.list))
-        return
-      } catch {
-        
-        if let jsonObject = JSONSerializer.jsonObject(with: data), let message = jsonObject["message"] as? String {
-          completion(.failure(ServerError(message: message)))
-          return
-        }
-        
-        completion(.failure(ServerError(message: error.localizedDescription)))
-        return
-      }
-    }.resume()
+    fetchEntityList(fromEndpoint: Endpoint.categoryList, queryItems: queryItems, completion: completion)
   }
   
 }
