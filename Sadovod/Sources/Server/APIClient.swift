@@ -80,6 +80,11 @@ extension APIClient {
     fetchEntity(fromEndpoint: Endpoint.checkToken, queryItems: queryItems, completion: completion)
   }
   
+  func authorize(login: String, password: String, completion: @escaping CompletionHandler<AuthorizationResponse>) {
+    let queryItems = ["key": Token.shared.catalogKey, "login": login, "password": password, "appname": Constants.appName]
+    fetchEntity(fromEndpoint: Endpoint.auth, queryItems: queryItems, completion: completion)
+  }
+  
   func fetchCategoryList(completion: @escaping CompletionHandler<[ProductCategory]>) {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": "0"]
     fetchEntityList(fromEndpoint: Endpoint.categoryList, queryItems: queryItems, completion: completion)
