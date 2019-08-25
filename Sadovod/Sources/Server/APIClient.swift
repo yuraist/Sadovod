@@ -69,17 +69,17 @@ class APIClient {
   }
 }
 
+// MARK: - API calls
+
 extension APIClient {
   
   func checkToken(catalogKey: String, superKey: String = "", completion: @escaping ((Result<Token, ServerError>) -> Void)) {
     let queryItems = ["catalog_key": catalogKey, "super_key": superKey]
-
     fetchEntity(fromEndpoint: Endpoint.checkToken, queryItems: queryItems, completion: completion)
   }
   
   func fetchCategoryList(completion: @escaping ((Result<[ProductCategory], ServerError>) -> Void)) {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": "0"]
-    
     fetchEntityList(fromEndpoint: Endpoint.categoryList, queryItems: queryItems, completion: completion)
   }
   
