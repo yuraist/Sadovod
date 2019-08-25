@@ -13,5 +13,5 @@ enum Endpoint {
   static let urlPrefix = "/abpro"
   
   static let checkToken = "/check_keys"
-  
+  static let categoryList = "/cats_list"
 }
