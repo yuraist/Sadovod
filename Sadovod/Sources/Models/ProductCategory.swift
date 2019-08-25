@@ -9,10 +9,12 @@
 import Foundation
 
 struct ProductCategory: Codable {
-  let id, title: String
+  let id, name, news, productCount, lux: String
   
   enum CodingKeys: String, CodingKey {
-    case id = "cat"
-    case title
+    case id = "cat_id"
+    case name = "cat_name"
+    case productCount = "prod_cnt"
+    case news, lux
   }
 }
