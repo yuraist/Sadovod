@@ -12,28 +12,21 @@ class APIClient {
   
   static let shared = APIClient()
   
-}
-
-extension APIClient {
-  
-  func checkToken(catalogKey: String, superKey: String = "", completion: @escaping ((Result<Token, ServerError>) -> Void)) {
-    let queryItems = ["catalog_key": catalogKey, "super_key": superKey]
-    
-    URLSessionDataTask.createDataTask(forPath: Endpoint.checkToken, queryItems: queryItems) { (data, _, error) in
+  fileprivate func fetchEntity<T: Codable>(fromEndpoint endpoint: String, queryItems: [String: String], completion: @escaping ((Result<T, ServerError>) -> Void)) {
+    URLSessionDataTask.createDataTask(forPath: endpoint, queryItems: queryItems) { (data, _, error) in
       if let error = error {
         completion(.failure(ServerError(message: error.localizedDescription)))
         return
       }
       
       guard let data = data else {
-        completion(.failure(ServerError(message: "No data in response")))
+        completion(.failure(ServerError(message: "No data in resopnse")))
         return
       }
       
       do {
-        let token = try JSONDecoder().decode(Token.self, from: data)
-        completion(.success(token))
-        return
+        let entity = try JSONDecoder().decode(T.self, from: data)
+        completion(.success(entity))
       } catch {
         
         if let jsonObject = JSONSerializer.jsonObject(with: data), let message = jsonObject["message"] as? String {
@@ -45,6 +38,15 @@ extension APIClient {
         return
       }
     }.resume()
+  }
+}
+
+extension APIClient {
+  
+  func checkToken(catalogKey: String, superKey: String = "", completion: @escaping ((Result<Token, ServerError>) -> Void)) {
+    let queryItems = ["catalog_key": catalogKey, "super_key": superKey]
+
+    fetchEntity(fromEndpoint: Endpoint.checkToken, queryItems: queryItems, completion: completion)
   }
   
   func fetchCategoryList(completion: @escaping ((Result<[ProductCategory], ServerError>) -> Void)) {
