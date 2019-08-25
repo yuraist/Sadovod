@@ -37,7 +37,35 @@ class APIClient {
         completion(.failure(ServerError(message: error.localizedDescription)))
         return
       }
-    }.resume()
+      }.resume()
+  }
+  
+  fileprivate func fetchEntityList<T: Codable>(fromEndpoint endpoint: String, queryItems: [String: String], completion: @escaping ((Result<[T], ServerError>) -> Void)) {
+    URLSessionDataTask.createDataTask(forPath: endpoint, queryItems: queryItems) { (data, _, error) in
+      if let error = error {
+        completion(.failure(ServerError(message: error.localizedDescription)))
+        return
+      }
+      
+      guard let data = data else {
+        completion(.failure(ServerError(message: "No data in resopnse")))
+        return
+      }
+      
+      do {
+        let entity = try JSONDecoder().decode(EntityList<T>.self, from: data)
+        completion(.success(entity.list))
+      } catch {
+        
+        if let jsonObject = JSONSerializer.jsonObject(with: data), let message = jsonObject["message"] as? String {
+          completion(.failure(ServerError(message: message)))
+          return
+        }
+        
+        completion(.failure(ServerError(message: error.localizedDescription)))
+        return
+      }
+      }.resume()
   }
 }
 
