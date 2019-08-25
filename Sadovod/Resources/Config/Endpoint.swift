@@ -14,4 +14,5 @@ enum Endpoint {
   
   static let checkToken = "/check_keys"
   static let categoryList = "/cat_catalog"
+  static let auth = "/auth"
 }
