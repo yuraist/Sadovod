@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
   
+  static let appName = "ios_sadovod"
   static let baseUrl = "tk-sad.ru"
   static let scheme = "https"
   
