@@ -81,6 +81,26 @@ class APIClientTests: XCTestCase {
     XCTAssertNotNil(userInfo)
   }
   
+  func testAPIClient_fetchMainScreenProducts() {
+    let promise = expectation(description: "Main screen products")
+    let testCategory = "9"
+    let testPage = 1
+    var products: [Product]?
+    
+    client.fetchMainScreenProducts(ofCategory: testCategory, page: testPage) { (result) in
+      switch result {
+      case .success(let response):
+        products = response
+      case .failure(let error):
+        print(error.message)
+      }
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(products)
+  }
+  
   func testAPIClient_fetchCategoryList_returnsCategoryList() {
     let promise = expectation(description: "Category list")
     var categoryList: [ProductCategory]?
