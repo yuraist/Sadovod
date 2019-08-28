@@ -9,8 +9,9 @@
 import Foundation
 
 struct Product: Codable {
-  var id, name, cost, url, active, like, lux, mark: String
+  var id, name, cost, url, active, like, lux: String
   var image, mediumImage, smallImage: String?
+  var mark: Int
   
   enum CodingKeys: String, CodingKey {
     case id, name, cost, url, active, like, lux, mark
