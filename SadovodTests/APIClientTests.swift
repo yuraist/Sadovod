@@ -51,7 +51,6 @@ class APIClientTests: XCTestCase {
     client.authorize(login: TestData.email, password: TestData.password) { (result) in
       switch result {
       case .success(let response):
-        print(response)
         authorizationResponse = response
       case .failure(let error):
         print(error.message)
@@ -64,6 +63,24 @@ class APIClientTests: XCTestCase {
     XCTAssertNotNil(authorizationResponse)
   }
   
+  func testAPILClient_fetchUserInfo() {
+    let promise = expectation(description: "User info")
+    var userInfo: UserInfo?
+    
+    client.fetchUserInfo { (result) in
+      switch result {
+      case .success(let response):
+        userInfo = response.user
+      case .failure(let error):
+        print(error.message)
+      }
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(userInfo)
+  }
+  
   func testAPIClient_fetchCategoryList_returnsCategoryList() {
     let promise = expectation(description: "Category list")
     var categoryList: [ProductCategory]?
@@ -71,7 +88,6 @@ class APIClientTests: XCTestCase {
     client.fetchCategoryList { (result) in
       switch result {
       case .success(let response):
-        print(response)
         categoryList = response
       case .failure(let error):
         print(error.message)
