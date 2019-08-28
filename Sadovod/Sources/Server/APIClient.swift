@@ -75,6 +75,8 @@ class APIClient {
 
 extension APIClient {
   
+  // MARK: - User methods
+  
   func checkToken(catalogKey: String, superKey: String = "", completion: @escaping CompletionHandler<Token>) {
     let queryItems = ["catalog_key": catalogKey, "super_key": superKey]
     fetchEntity(fromEndpoint: Endpoint.checkToken, queryItems: queryItems, completion: completion)
@@ -84,6 +86,8 @@ extension APIClient {
     let queryItems = ["key": Token.shared.catalogKey, "login": login, "password": password, "appname": Constants.appName]
     fetchEntity(fromEndpoint: Endpoint.auth, queryItems: queryItems, completion: completion)
   }
+  
+  // MARK: - Catalog methods
   
   func fetchCategoryList(completion: @escaping CompletionHandler<[ProductCategory]>) {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": "0"]
