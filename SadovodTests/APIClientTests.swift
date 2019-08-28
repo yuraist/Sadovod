@@ -11,6 +11,7 @@ import XCTest
 
 class APIClientTests: XCTestCase {
   
+  let testCategory = "9"
   var client: APIClient!
   
   override func setUp() {
@@ -82,7 +83,6 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_fetchMainScreenProducts() {
-    let testCategory = "9"
     let testPage = 1
     let promise = expectation(description: "Main screen products")
     var products: [Product]?
@@ -120,7 +120,6 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_fetchCategoryTree() {
-    let testCategory = "9"
     let promise = expectation(description: "Category tree")
     var categoryTree: [TreeCategory]?
     
