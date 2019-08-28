@@ -18,7 +18,7 @@ enum Endpoint {
   static let fetchUserInfo = "/user/get"
   
   // MARK: - Catalog
-  static let fetchProductsOfPopularCategory = "/get_tab_broducts"
+  static let fetchProductsOfPopularCategory = "/get_tab_products"
   static let categoryList = "/cat_catalog"
   static let fetchCategoryTree = "/get_tree_by_catalog"
   static let fetchProductsOfCategory = "/cat_prods_catalog"
