@@ -82,9 +82,9 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_fetchMainScreenProducts() {
-    let promise = expectation(description: "Main screen products")
     let testCategory = "9"
     let testPage = 1
+    let promise = expectation(description: "Main screen products")
     var products: [Product]?
     
     client.fetchMainScreenProducts(ofCategory: testCategory, page: testPage) { (result) in
@@ -117,6 +117,25 @@ class APIClientTests: XCTestCase {
     
     waitForExpectations(timeout: 5, handler: nil)
     XCTAssertNotNil(categoryList)
+  }
+  
+  func testAPIClient_fetchCategoryTree() {
+    let testCategory = "9"
+    let promise = expectation(description: "Category tree")
+    var categoryTree: [TreeCategory]?
+    
+    client.fetchCategoryTree(forCategory: testCategory) { (result) in
+      switch result {
+      case .success(let response):
+        categoryTree = response.tree
+      case .failure(let error):
+        print(error.message)
+      }
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(categoryTree)
   }
   
 }
