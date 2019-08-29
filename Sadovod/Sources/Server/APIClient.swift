@@ -122,4 +122,8 @@ extension APIClient {
     fetchEntityList(fromEndpoint: Endpoint.fetchProductsOfCategory, queryItems: queryItems, completion: completion)
   }
   
+  func fetchProduct(_ product: String, completion: @escaping CompletionHandler<DetailProductResponse>) {
+    let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "product": product]
+    fetchEntity(fromEndpoint: Endpoint.fetchProductInfo, queryItems: queryItems, completion: completion)
+  }
 }
