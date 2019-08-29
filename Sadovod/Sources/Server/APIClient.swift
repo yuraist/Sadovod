@@ -109,4 +109,17 @@ extension APIClient {
     fetchEntity(fromEndpoint: Endpoint.fetchCategoryTree, queryItems: queryItems, completion: completion)
   }
   
+  func fetchProducts(ofCategory category: String, page: Int, options: String="", cost: String="", sort: String="", completion: @escaping CompletionHandler<[Product]>) {
+    let queryItems = [
+      "token": Token.shared.catalogKey,
+      "appname": Constants.appName,
+      "page": "\(page)",
+      "o": options,
+      "cost": cost,
+      "sort": sort
+    ]
+    
+    fetchEntityList(fromEndpoint: Endpoint.fetchProductsOfCategory, queryItems: queryItems, completion: completion)
+  }
+  
 }
