@@ -30,6 +30,6 @@ enum Endpoint {
   static let removeProductFromCart = "/buy_product_del"
   static let removeAllItemsOfProductFromCart = "/buy_product_clear_all"
   static let removeAllSizesOfProductFromCart = "/buy_product_clear"
-  static let fetchShortCartInfo = "/cart_total"
+  static let fetchCartSummary = "/cart_total"
   static let fetchDetailCartInfo = "/cart_info_detail"
 }
