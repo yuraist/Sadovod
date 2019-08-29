@@ -9,12 +9,13 @@
 import Foundation
 
 struct Product: Codable {
-  var id, name, cost, url, active, like, lux: String
-  var image, mediumImage, smallImage: String?
-  var mark: Int
+  var id, name, cost: String
+  var image, mediumImage, smallImage, url, active, like, lux: String?
+  var mark: Int?
+  var sizes: [ProductSize]?
   
   enum CodingKeys: String, CodingKey {
-    case id, name, cost, url, active, like, lux, mark
+    case id, name, cost, url, active, like, lux, mark, sizes
     case image = "img"
     case mediumImage = "img_med"
     case smallImage = "img_small"
