@@ -11,6 +11,7 @@ import XCTest
 
 class APIClientTests: XCTestCase {
   
+  let testPage = 1
   let testCategory = "9"
   var client: APIClient!
   
@@ -83,7 +84,6 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_fetchMainScreenProducts() {
-    let testPage = 1
     let promise = expectation(description: "Main screen products")
     var products: [Product]?
     
@@ -135,6 +135,25 @@ class APIClientTests: XCTestCase {
     
     waitForExpectations(timeout: 5, handler: nil)
     XCTAssertNotNil(categoryTree)
+  }
+  
+  func testAPIClient_fetchProducts() {
+    let promise = expectation(description: "Product list")
+    var products: [Product]?
+    
+    client.fetchProducts(ofCategory: testCategory, page: testPage) { (result) in
+      switch result {
+      case .success(let response):
+        products = response
+      case .failure(let error):
+        print(error.message)
+      }
+      
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(products)
   }
   
 }
