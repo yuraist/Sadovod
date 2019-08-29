@@ -126,4 +126,11 @@ extension APIClient {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "product": product]
     fetchEntity(fromEndpoint: Endpoint.fetchProductInfo, queryItems: queryItems, completion: completion)
   }
+  
+  // MARK: - Cart methods
+  
+  func addProductToCart(sizeId size: String, completion: @escaping CompletionHandler<UpdateProductInCartResponse>) {
+    let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "size": size]
+    fetchEntity(fromEndpoint: Endpoint.addProductToCart, queryItems: queryItems, completion: completion)
+  }
 }
