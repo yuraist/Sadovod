@@ -123,7 +123,7 @@ class APIClientTests: XCTestCase {
     let promise = expectation(description: "Category tree")
     var categoryTree: [TreeCategory]?
     
-    client.fetchCategoryTree(forCategory: testCategory) { (result) in
+    client.fetchCategoryTree(ofCategory: testCategory) { (result) in
       switch result {
       case .success(let response):
         categoryTree = response.tree

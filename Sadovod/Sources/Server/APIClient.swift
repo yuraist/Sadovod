@@ -104,7 +104,7 @@ extension APIClient {
     fetchEntityList(fromEndpoint: Endpoint.categoryList, queryItems: queryItems, completion: completion)
   }
   
-  func fetchCategoryTree(forCategory category: String, completion: @escaping CompletionHandler<TreeCategoriesResponse>) {
+  func fetchCategoryTree(ofCategory category: String, completion: @escaping CompletionHandler<TreeCategoriesResponse>) {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "cat": category]
     fetchEntity(fromEndpoint: Endpoint.fetchCategoryTree, queryItems: queryItems, completion: completion)
   }
