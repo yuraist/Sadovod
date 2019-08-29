@@ -13,7 +13,7 @@ struct CartProduct: Codable {
   
   enum CodingKeys: String, CodingKey {
     case note, name, count, cost, id
-    case priceId = "priceId"
+    case priceId = "price_id"
     case image = "img"
   }
 }
