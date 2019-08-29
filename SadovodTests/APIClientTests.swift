@@ -157,7 +157,7 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_fetchProduct() {
-    let promise = expectation(description: "Product info")
+    let promise = expectation(description: "Fetch product")
     let testProductId = "94530"
     var product: DetailProduct?
     
@@ -177,7 +177,7 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_addProductToCart() {
-    let promise = expectation(description: "Product info")
+    let promise = expectation(description: "Add product to cart")
     let testSize = "1177675"
     var productResponse: UpdateProductInCartResponse?
     
@@ -197,7 +197,7 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_removeProductFromCart() {
-    let promise = expectation(description: "Product info")
+    let promise = expectation(description: "Remove product from a cart")
     let testSize = "1177675"
     var productResponse: UpdateProductInCartResponse?
     
@@ -217,7 +217,7 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_removeAllItemsOfProductFromCart() {
-    let promise = expectation(description: "Product info")
+    let promise = expectation(description: "Remove all items of product from a cart")
     let testProduct = "94530"
     var productResponse: UpdateProductInCartResponse?
     
@@ -237,7 +237,7 @@ class APIClientTests: XCTestCase {
   }
   
   func testAPIClient_fetchCartSummary() {
-    let promise = expectation(description: "Product info")
+    let promise = expectation(description: "Fetch cart summary")
     var cartSummary: CartSummary?
     
     client.fetchCartSummary { (result) in
@@ -253,5 +253,25 @@ class APIClientTests: XCTestCase {
     
     waitForExpectations(timeout: 5, handler: nil)
     XCTAssertNotNil(cartSummary)
+  }
+  
+  func testAPIClient_fetchCart() {
+    let promise = expectation(description: "Fetch cart")
+    var cartProducts: [CartProduct]?
+    
+    client.fetchCart { (result) in
+      switch result {
+      case .success(let response):
+        cartProducts = response
+        print(response)
+      case .failure(let error):
+        print(error.message)
+      }
+      
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(cartProducts)
   }
 }
