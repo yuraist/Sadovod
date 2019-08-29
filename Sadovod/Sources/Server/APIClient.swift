@@ -138,4 +138,9 @@ extension APIClient {
     let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "size": size]
     fetchEntity(fromEndpoint: Endpoint.removeProductFromCart, queryItems: queryItems, completion: completion)
   }
+  
+  func removeAllItems(ofProduct product: String, completion: @escaping CompletionHandler<UpdateProductInCartResponse>) {
+    let queryItems = ["token": Token.shared.catalogKey, "appname": Constants.appName, "product": product]
+    fetchEntity(fromEndpoint: Endpoint.removeAllItemsOfProductFromCart, queryItems: queryItems, completion: completion)
+  }
 }
