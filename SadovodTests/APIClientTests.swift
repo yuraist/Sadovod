@@ -195,4 +195,24 @@ class APIClientTests: XCTestCase {
     waitForExpectations(timeout: 5, handler: nil)
     XCTAssertNotNil(productResponse)
   }
+  
+  func testAPIClient_removeProductFromCart() {
+    let promise = expectation(description: "Product info")
+    let testSize = "1177675"
+    var productResponse: UpdateProductInCartResponse?
+    
+    client.removeProductFromCart(sizeId: testSize) { (result) in
+      switch result {
+      case .success(let response):
+        productResponse = response
+      case .failure(let error):
+        print(error.message)
+      }
+      
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(productResponse)
+  }
 }
