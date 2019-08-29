@@ -156,4 +156,23 @@ class APIClientTests: XCTestCase {
     XCTAssertNotNil(products)
   }
   
+  func testAPIClient_fetchProduct() {
+    let promise = expectation(description: "Product info")
+    let testProductId = "94530"
+    var product: DetailProduct?
+    
+    client.fetchProduct(testProductId) { (result) in
+      switch result {
+      case .success(let response):
+        product = response.product
+      case .failure(let error):
+        print(error.message)
+      }
+      
+      promise.fulfill()
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+    XCTAssertNotNil(product)
+  }
 }

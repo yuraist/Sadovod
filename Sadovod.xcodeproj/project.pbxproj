@@ -31,6 +31,10 @@
 		BEDCF97E23104EDF006BA5AA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCF97D23104EDF006BA5AA /* Token.swift */; };
 		BEDCF98023104FA0006BA5AA /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCF97F23104FA0006BA5AA /* ServerError.swift */; };
 		BEDCF9822310547F006BA5AA /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCF9812310547F006BA5AA /* APIClientTests.swift */; };
+		BEF02CA72317B8BC007B7370 /* DetailProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CA62317B8BC007B7370 /* DetailProduct.swift */; };
+		BEF02CA92317BEBB007B7370 /* ProductOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CA82317BEBB007B7370 /* ProductOption.swift */; };
+		BEF02CAB2317BEC1007B7370 /* ProductSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CAA2317BEC1007B7370 /* ProductSize.swift */; };
+		BEF02CAE2317BFC1007B7370 /* DetailProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CAD2317BFC1007B7370 /* DetailProductResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		BEDCF97D23104EDF006BA5AA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BEDCF97F23104FA0006BA5AA /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		BEDCF9812310547F006BA5AA /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		BEF02CA62317B8BC007B7370 /* DetailProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProduct.swift; sourceTree = "<group>"; };
+		BEF02CA82317BEBB007B7370 /* ProductOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOption.swift; sourceTree = "<group>"; };
+		BEF02CAA2317BEC1007B7370 /* ProductSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSize.swift; sourceTree = "<group>"; };
+		BEF02CAD2317BFC1007B7370 /* DetailProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				BECF1FA0231661E200CAAFE8 /* Response */,
+				BEF02CAC2317BF93007B7370 /* Product */,
 				BE9DD3092312CA0D007D275C /* EntityList.swift */,
 				BE9DD3072312C714007D275C /* ProductCategory.swift */,
 				BECF1FA323167D0800CAAFE8 /* TreeCategory.swift */,
-				BECF1FA12316676000CAAFE8 /* Product.swift */,
 				BECF1F9E2316615400CAAFE8 /* UserInfo.swift */,
 			);
 			path = Models;
@@ -242,8 +250,20 @@
 				BEC59B6F2312EC1A00E26F45 /* AuthorizationResponse.swift */,
 				BECF1F9C2316613A00CAAFE8 /* UserInfoResponse.swift */,
 				BECF1FA523167EBD00CAAFE8 /* TreeCategoriesResponse.swift */,
+				BEF02CAD2317BFC1007B7370 /* DetailProductResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		BEF02CAC2317BF93007B7370 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				BECF1FA12316676000CAAFE8 /* Product.swift */,
+				BEF02CA62317B8BC007B7370 /* DetailProduct.swift */,
+				BEF02CA82317BEBB007B7370 /* ProductOption.swift */,
+				BEF02CAA2317BEC1007B7370 /* ProductSize.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,13 +366,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF02CA92317BEBB007B7370 /* ProductOption.swift in Sources */,
 				BEDCF97E23104EDF006BA5AA /* Token.swift in Sources */,
 				BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */,
+				BEF02CAB2317BEC1007B7370 /* ProductSize.swift in Sources */,
 				BEC59B702312EC1A00E26F45 /* AuthorizationResponse.swift in Sources */,
 				BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */,
 				BE8ACFE7230EBBB70073A017 /* Endpoint.swift in Sources */,
 				BECF1F9F2316615400CAAFE8 /* UserInfo.swift in Sources */,
 				BE8ACFE3230EB7A70073A017 /* RequestMethod.swift in Sources */,
+				BEF02CAE2317BFC1007B7370 /* DetailProductResponse.swift in Sources */,
 				BECF1FA423167D0800CAAFE8 /* TreeCategory.swift in Sources */,
 				BECF1FA623167EBD00CAAFE8 /* TreeCategoriesResponse.swift in Sources */,
 				BEC59B6E2312E48F00E26F45 /* TestData.swift in Sources */,
@@ -362,6 +385,7 @@
 				BECF1FA22316676000CAAFE8 /* Product.swift in Sources */,
 				BE8ACFE5230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift in Sources */,
 				BECF1F9D2316613A00CAAFE8 /* UserInfoResponse.swift in Sources */,
+				BEF02CA72317B8BC007B7370 /* DetailProduct.swift in Sources */,
 				BE9DD30A2312CA0D007D275C /* EntityList.swift in Sources */,
 				BE9DD3082312C714007D275C /* ProductCategory.swift in Sources */,
 				BE8ACFDC230EB6160073A017 /* APIClient.swift in Sources */,
