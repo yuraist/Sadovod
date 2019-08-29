@@ -9,10 +9,11 @@
 import Foundation
 
 struct ProductSize: Codable {
-  var id, value, available: String
+  var id, value: String
+  var available, count, cost: String?
   
   enum CodingKeys: String, CodingKey {
-    case id, value
+    case id, value, count, cost
     case available = "aviable"
   }
 }
