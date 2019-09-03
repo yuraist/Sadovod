@@ -11,6 +11,7 @@ import ConvenientLayout
 
 class PopularCategoryCollectionViewCell: UICollectionViewCell {
   
+  static let cellId = "popularCategoryCellId"
   static let height: CGFloat = 172
   
   // MARK: - Views
