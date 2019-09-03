@@ -10,11 +10,18 @@ import UIKit
 
 class HomeVC: UIViewController {
   
+  static let navigationTitle = "Главная"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavigationBar()
     addSubviews()
     setupLayout()
+  }
+  
+  fileprivate func setupNavigationBar() {
+    navigationItem.title = HomeVC.navigationTitle
   }
   
   fileprivate func addSubviews() {

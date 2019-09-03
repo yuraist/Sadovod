@@ -10,11 +10,18 @@ import UIKit
 
 class ProfileVC: UIViewController {
   
+  static let navigationTitle = "Профиль"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavigationBar()
     addSubviews()
     setupLayout()
+  }
+  
+  fileprivate func setupNavigationBar() {
+    navigationItem.title = ProfileVC.navigationTitle
   }
   
   fileprivate func addSubviews() {

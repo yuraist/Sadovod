@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE74F5E6231E631B003AC578 /* CatalogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5E5231E631B003AC578 /* CatalogVC.swift */; };
+		BE74F5E8231E632C003AC578 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5E7231E632C003AC578 /* HomeVC.swift */; };
+		BE74F5EA231E634A003AC578 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5E9231E634A003AC578 /* CartVC.swift */; };
+		BE74F5EC231E6359003AC578 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5EB231E6359003AC578 /* ProfileVC.swift */; };
+		BE74F5F0231E6376003AC578 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5EF231E6376003AC578 /* InfoVC.swift */; };
+		BE74F5F2231E63E6003AC578 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5F1231E63E6003AC578 /* CategoriesVC.swift */; };
+		BE74F5F4231E63F1003AC578 /* SubcategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5F3231E63F1003AC578 /* SubcategoriesVC.swift */; };
+		BE74F5F7231E6593003AC578 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74F5F6231E6593003AC578 /* Extensions+UIViewController.swift */; };
 		BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFD5230EA0490073A017 /* Constants.swift */; };
 		BE8ACFDC230EB6160073A017 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFDB230EB6160073A017 /* APIClient.swift */; };
 		BE8ACFDF230EB73D0073A017 /* Extensions+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */; };
@@ -37,6 +45,7 @@
 		BEF02CAE2317BFC1007B7370 /* DetailProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CAD2317BFC1007B7370 /* DetailProductResponse.swift */; };
 		BEF02CB02317C546007B7370 /* UpdateProductInCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CAF2317C546007B7370 /* UpdateProductInCartResponse.swift */; };
 		BEF02CB22317CAA7007B7370 /* CartSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CB12317CAA7007B7370 /* CartSummary.swift */; };
+		BEF02CB42317CB9B007B7370 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CB32317CB9B007B7370 /* CartProduct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE74F5E5231E631B003AC578 /* CatalogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogVC.swift; sourceTree = "<group>"; };
+		BE74F5E7231E632C003AC578 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BE74F5E9231E634A003AC578 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		BE74F5EB231E6359003AC578 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		BE74F5EF231E6376003AC578 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		BE74F5F1231E63E6003AC578 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
+		BE74F5F3231E63F1003AC578 /* SubcategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoriesVC.swift; sourceTree = "<group>"; };
+		BE74F5F6231E6593003AC578 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		BE8ACFD5230EA0490073A017 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE8ACFDB230EB6160073A017 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+URLRequest.swift"; sourceTree = "<group>"; };
@@ -84,6 +101,7 @@
 		BEF02CAD2317BFC1007B7370 /* DetailProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductResponse.swift; sourceTree = "<group>"; };
 		BEF02CAF2317C546007B7370 /* UpdateProductInCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductInCartResponse.swift; sourceTree = "<group>"; };
 		BEF02CB12317CAA7007B7370 /* CartSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSummary.swift; sourceTree = "<group>"; };
+		BEF02CB32317CB9B007B7370 /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +122,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE74F5F5231E63F7003AC578 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				BE74F5E5231E631B003AC578 /* CatalogVC.swift */,
+				BE74F5F1231E63E6003AC578 /* CategoriesVC.swift */,
+				BE74F5F3231E63F1003AC578 /* SubcategoriesVC.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		BE8ACFD7230EA0570073A017 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +197,7 @@
 			children = (
 				BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */,
 				BE8ACFE4230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift */,
+				BE74F5F6231E6593003AC578 /* Extensions+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +251,11 @@
 			isa = PBXGroup;
 			children = (
 				BEC49531230E9D2F00625872 /* MainTabBarVC.swift */,
+				BE74F5E7231E632C003AC578 /* HomeVC.swift */,
+				BE74F5F5231E63F7003AC578 /* Catalog */,
+				BE74F5E9231E634A003AC578 /* CartVC.swift */,
+				BE74F5EB231E6359003AC578 /* ProfileVC.swift */,
+				BE74F5EF231E6376003AC578 /* InfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -268,6 +302,7 @@
 				BEF02CA62317B8BC007B7370 /* DetailProduct.swift */,
 				BEF02CA82317BEBB007B7370 /* ProductOption.swift */,
 				BEF02CAA2317BEC1007B7370 /* ProductSize.swift */,
+				BEF02CB32317CB9B007B7370 /* CartProduct.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -378,21 +413,30 @@
 				BEF02CAB2317BEC1007B7370 /* ProductSize.swift in Sources */,
 				BEC59B702312EC1A00E26F45 /* AuthorizationResponse.swift in Sources */,
 				BEC49530230E9D2F00625872 /* AppDelegate.swift in Sources */,
+				BE74F5F2231E63E6003AC578 /* CategoriesVC.swift in Sources */,
 				BE8ACFE7230EBBB70073A017 /* Endpoint.swift in Sources */,
 				BECF1F9F2316615400CAAFE8 /* UserInfo.swift in Sources */,
+				BE74F5EA231E634A003AC578 /* CartVC.swift in Sources */,
 				BE8ACFE3230EB7A70073A017 /* RequestMethod.swift in Sources */,
 				BEF02CAE2317BFC1007B7370 /* DetailProductResponse.swift in Sources */,
+				BE74F5F7231E6593003AC578 /* Extensions+UIViewController.swift in Sources */,
 				BECF1FA423167D0800CAAFE8 /* TreeCategory.swift in Sources */,
+				BE74F5F0231E6376003AC578 /* InfoVC.swift in Sources */,
 				BECF1FA623167EBD00CAAFE8 /* TreeCategoriesResponse.swift in Sources */,
+				BEF02CB42317CB9B007B7370 /* CartProduct.swift in Sources */,
 				BEC59B6E2312E48F00E26F45 /* TestData.swift in Sources */,
 				BEDCF98023104FA0006BA5AA /* ServerError.swift in Sources */,
 				BEF02CB02317C546007B7370 /* UpdateProductInCartResponse.swift in Sources */,
 				BE9DD30C2312CB10007D275C /* JSONSerializer.swift in Sources */,
 				BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */,
 				BECF1FA22316676000CAAFE8 /* Product.swift in Sources */,
+				BE74F5E6231E631B003AC578 /* CatalogVC.swift in Sources */,
 				BE8ACFE5230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift in Sources */,
 				BECF1F9D2316613A00CAAFE8 /* UserInfoResponse.swift in Sources */,
+				BE74F5F4231E63F1003AC578 /* SubcategoriesVC.swift in Sources */,
 				BEF02CA72317B8BC007B7370 /* DetailProduct.swift in Sources */,
+				BE74F5E8231E632C003AC578 /* HomeVC.swift in Sources */,
+				BE74F5EC231E6359003AC578 /* ProfileVC.swift in Sources */,
 				BE9DD30A2312CA0D007D275C /* EntityList.swift in Sources */,
 				BEF02CB22317CAA7007B7370 /* CartSummary.swift in Sources */,
 				BE9DD3082312C714007D275C /* ProductCategory.swift in Sources */,

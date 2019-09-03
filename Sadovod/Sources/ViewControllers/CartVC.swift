@@ -10,11 +10,18 @@ import UIKit
 
 class CartVC: UIViewController {
   
+  static let navigationTitle = "Корзина"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavigationBar()
     addSubviews()
     setupLayout()
+  }
+  
+  fileprivate func setupNavigationBar() {
+    navigationItem.title = CartVC.navigationTitle
   }
   
   fileprivate func addSubviews() {

@@ -10,11 +10,18 @@ import UIKit
 
 class CatalogVC: UIViewController {
   
+  static let navigationTitle = "Каталог"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavigationBar()
     addSubviews()
     setupLayout()
+  }
+  
+  fileprivate func setupNavigationBar() {
+    navigationItem.title = CatalogVC.navigationTitle
   }
   
   fileprivate func addSubviews() {
