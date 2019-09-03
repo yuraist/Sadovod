@@ -12,12 +12,18 @@ class HomeVC: UIViewController {
   
   static let navigationTitle = "Главная"
   
+  let homeCollectionViewDataSource = HomeCollectionViewDataSource()
+  let collectionView = HomeCollectionView()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setupNavigationBar()
     addSubviews()
     setupLayout()
+    
+    setupCollectionViewDataSource()
+    setupCollectionViewDelegate()
   }
   
   fileprivate func setupNavigationBar() {
@@ -25,10 +31,27 @@ class HomeVC: UIViewController {
   }
   
   fileprivate func addSubviews() {
-    
+    view.addSubview(collectionView)
   }
   
   fileprivate func setupLayout() {
-    
+    collectionView.fillSuperview()
   }
+  
+  fileprivate func setupCollectionViewDataSource() {
+    collectionView.dataSource = homeCollectionViewDataSource
+  }
+  
+  fileprivate func setupCollectionViewDelegate() {
+    collectionView.delegate = self
+  }
+}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    // TODO: - Estimate height or move the the constants
+    return CGSize(width: view.frame.width, height: 210 + 16 + 12)
+  }
+  
 }
