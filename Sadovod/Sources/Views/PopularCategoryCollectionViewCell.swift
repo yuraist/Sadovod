@@ -50,14 +50,23 @@ class PopularCategoryCollectionViewCell: UICollectionViewCell {
   }
   
   fileprivate func setupLayout() {
-    icon.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil,
+    icon.anchor(top: topAnchor,
+                leading: leadingAnchor,
+                bottom: nil,
+                trailing: nil,
                 size: .init(width: 120, height: 120))
     
-    title.anchor(top: icon.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor,
+    title.anchor(top: icon.bottomAnchor,
+                 leading: leadingAnchor,
+                 bottom: nil,
+                 trailing: trailingAnchor,
                  padding: .init(top: 12, left: 0, bottom: 0, right: 0),
                  size: .init(width: 0, height: 20))
     
-    productCountLabel.anchor(top: title.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+    productCountLabel.anchor(top: title.bottomAnchor,
+                             leading: leadingAnchor,
+                             bottom: bottomAnchor,
+                             trailing: trailingAnchor)
   }
   
 }
