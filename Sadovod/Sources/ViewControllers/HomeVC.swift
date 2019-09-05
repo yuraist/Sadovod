@@ -35,7 +35,11 @@ class HomeVC: UIViewController {
   }
   
   fileprivate func setupLayout() {
-    collectionView.fillSuperview()
+    view.backgroundColor = .white
+    collectionView.anchor(top: view.topAnchor,
+                          leading: view.safeAreaLayoutGuide.leadingAnchor,
+                          bottom: view.bottomAnchor,
+                          trailing: view.safeAreaLayoutGuide.trailingAnchor)
   }
   
   fileprivate func setupCollectionViewDataSource() {
@@ -50,8 +54,14 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    // TODO: - Estimate height or move the the constants
-    return CGSize(width: view.frame.width, height: 210 + 16 + 12)
+    
+    let padding = CGFloat(28)
+    
+    if indexPath.item == 0 {
+      return CGSize(width: view.frame.width, height: HomePopularCategoriesCollectionViewCell.cellHeight + padding)
+    }
+    
+    return CGSize(width: view.frame.width, height: AuthorizeCollectionViewCell.cellHeight + padding)
   }
   
 }
