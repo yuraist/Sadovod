@@ -15,6 +15,7 @@ class HomeCollectionView: UICollectionView {
     
     backgroundColor = .white
     register(HomePopularCategoriesCollectionViewCell.self, forCellWithReuseIdentifier: HomePopularCategoriesCollectionViewCell.cellId)
+    register(AuthorizeCollectionViewCell.self, forCellWithReuseIdentifier: AuthorizeCollectionViewCell.cellId)
   }
   
   required init?(coder aDecoder: NSCoder) {
