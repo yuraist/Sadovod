@@ -35,7 +35,6 @@ class TextFieldTableViewCell: UITableViewCell {
   }
   
   fileprivate func setupLayout() {
-    
     title.anchor(top: nil,
                  leading: leadingAnchor,
                  bottom: nil,
