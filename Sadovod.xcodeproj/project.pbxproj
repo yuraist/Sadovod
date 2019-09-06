@@ -272,10 +272,7 @@
 			children = (
 				BE0933FC231FA975007AB5FE /* Home */,
 				BE5BCB7C2321528D00BC41D0 /* Catalog */,
-				BE151D76232123D2009947A0 /* SmallWhiteButton.swift */,
-				BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */,
-				BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */,
-				BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */,
+				BEAABB2C2322B89A008C6CF8 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +305,17 @@
 				BE74F5F6231E6593003AC578 /* Extensions+UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BEAABB2C2322B89A008C6CF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE151D76232123D2009947A0 /* SmallWhiteButton.swift */,
+				BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */,
+				BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */,
+				BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BEC49523230E9D2F00625872 = {
