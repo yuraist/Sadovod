@@ -12,6 +12,8 @@
 		BE151D7923213CD1009947A0 /* CatalogCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7823213CD1009947A0 /* CatalogCategoryTableViewCell.swift */; };
 		BE151D7B2321401F009947A0 /* CategoriesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7A2321401F009947A0 /* CategoriesTableView.swift */; };
 		BE151D7D23214086009947A0 /* CategoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7C23214086009947A0 /* CategoriesTableViewDataSource.swift */; };
+		BE2AEA972323B98700270A05 /* Extensions+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */; };
+		BE2AEA992323C4C100270A05 /* SmallGrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */; };
 		BE5BCB7E232152AB00BC41D0 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */; };
 		BE5BCB802321538600BC41D0 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */; };
 		BE5BCB822321555100BC41D0 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */; };
@@ -112,6 +114,8 @@
 		BE151D7823213CD1009947A0 /* CatalogCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		BE151D7A2321401F009947A0 /* CategoriesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableView.swift; sourceTree = "<group>"; };
 		BE151D7C23214086009947A0 /* CategoriesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewDataSource.swift; sourceTree = "<group>"; };
+		BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImageView.swift"; sourceTree = "<group>"; };
+		BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGrayButton.swift; sourceTree = "<group>"; };
 		BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 		BE8ACFDA230EA0C50073A017 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEAABB2D2322B8BB008C6CF8 /* CartCollectionView.swift */,
+				BEAABB2F2322B8F1008C6CF8 /* CartCollectionViewCell.swift */,
 				BE0933FC231FA975007AB5FE /* Home */,
 				BE5BCB7C2321528D00BC41D0 /* Catalog */,
 				BEAABB2C2322B89A008C6CF8 /* Common */,
@@ -310,6 +316,7 @@
 				BE8ACFDE230EB73D0073A017 /* Extensions+URLRequest.swift */,
 				BE8ACFE4230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift */,
 				BE74F5F6231E6593003AC578 /* Extensions+UIViewController.swift */,
+				BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,11 +325,10 @@
 			isa = PBXGroup;
 			children = (
 				BE151D76232123D2009947A0 /* SmallWhiteButton.swift */,
+				BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */,
 				BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */,
 				BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */,
 				BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */,
-				BEAABB2D2322B8BB008C6CF8 /* CartCollectionView.swift */,
-				BEAABB2F2322B8F1008C6CF8 /* CartCollectionViewCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -557,6 +563,7 @@
 				BE74F642231E8D33003AC578 /* PopularCategoryCollectionView.swift in Sources */,
 				BE5BCB7E232152AB00BC41D0 /* TextFieldTableViewCell.swift in Sources */,
 				BEC49532230E9D2F00625872 /* MainTabBarVC.swift in Sources */,
+				BE2AEA992323C4C100270A05 /* SmallGrayButton.swift in Sources */,
 				BEF02CAB2317BEC1007B7370 /* ProductSize.swift in Sources */,
 				BEC59B702312EC1A00E26F45 /* AuthorizationResponse.swift in Sources */,
 				BE151D7523211995009947A0 /* AuthorizeCollectionViewCell.swift in Sources */,
@@ -588,6 +595,7 @@
 				BE8ACFD6230EA0490073A017 /* Constants.swift in Sources */,
 				BECF1FA22316676000CAAFE8 /* Product.swift in Sources */,
 				BE74F64C231EB163003AC578 /* HomeCollectionViewDataSource.swift in Sources */,
+				BE2AEA972323B98700270A05 /* Extensions+UIImageView.swift in Sources */,
 				BE74F648231EA4DF003AC578 /* PopularCategory.swift in Sources */,
 				BE74F5E6231E631B003AC578 /* CatalogVC.swift in Sources */,
 				BE8ACFE5230EBA7B0073A017 /* Extensions+URLSessionDataTask.swift in Sources */,

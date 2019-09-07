@@ -56,7 +56,7 @@ class CartCollectionViewCell: UICollectionViewCell {
   
   fileprivate let countLabel: UILabel = {
     let label = UILabel()
-    label.text = "КОЛИЧЕСТВО"
+    label.text = "КОЛИЧЕСТВО:"
     label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
     return label
   }()
@@ -123,5 +123,11 @@ class CartCollectionViewCell: UICollectionViewCell {
                         trailing: nil,
                         padding: .init(top: 0, left: 8, bottom: 0, right: 0),
                         size: .init(width: 36, height: 32))
+    
+    countLabel.anchor(top: nil,
+                      leading: countButton.leadingAnchor,
+                      bottom: countButton.topAnchor,
+                      trailing: nil,
+                      padding: .init(top: 0, left: 0, bottom: 4, right: 0))
   }
 }
