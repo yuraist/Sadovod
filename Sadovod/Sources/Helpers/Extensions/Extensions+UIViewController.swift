@@ -20,5 +20,14 @@ extension UIViewController {
     navigationController.tabBarItem = tabBarItem
     return navigationController
   }
+ 
+  func showMessageAlert(withTitle title: String, text: String) {
+    let successAlert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+    successAlert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+    present(successAlert, animated: true, completion: nil)
+  }
   
+  func showErrorAlert(withText text: String) {
+    showMessageAlert(withTitle: "Ошибка", text: text)
+  }
 }
