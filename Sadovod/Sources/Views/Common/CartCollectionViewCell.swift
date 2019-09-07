@@ -35,6 +35,8 @@ class CartCollectionViewCell: UICollectionViewCell {
   let image: UIImageView = {
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
+    imageView.layer.cornerRadius = 5
+    imageView.layer.masksToBounds = true
     return imageView
   }()
   
@@ -52,7 +54,7 @@ class CartCollectionViewCell: UICollectionViewCell {
     return label
   }()
   
-  let countLabel: UILabel = {
+  fileprivate let countLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
     return label
@@ -69,8 +71,15 @@ class CartCollectionViewCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
+  let infoStackView = UIStackView()
+  
   fileprivate func addSubviews() {
     addSubview(background)
+    background.addSubviews(image, infoStackView)
+    
+    infoStackView.addArrangedSubview(title)
+    infoStackView.addArrangedSubview(priceLabel)
+    infoStackView.addArrangedSubview(sizeLabel)
   }
   
   fileprivate func setupLayout() {
@@ -79,5 +88,22 @@ class CartCollectionViewCell: UICollectionViewCell {
                       bottom: bottomAnchor,
                       trailing: trailingAnchor,
                       padding: .init(top: 12, left: 16, bottom: 16, right: 16))
+    
+    image.anchor(top: background.topAnchor,
+                 leading: background.leadingAnchor,
+                 bottom: nil,
+                 trailing: nil,
+                 padding: .init(top: 12, left: 8, bottom: 0, right: 0),
+                 size: .init(width: 120, height: 160))
+    
+    infoStackView.anchor(top: background.topAnchor,
+                         leading: image.trailingAnchor,
+                         bottom: nil,
+                         trailing: background.trailingAnchor,
+                         padding: .init(top: 12, left: 12, bottom: 0, right: 8),
+                         size: .init(width: 0, height: 66))
+    
+    infoStackView.axis = .vertical
+    infoStackView.alignment = .leading
   }
 }
