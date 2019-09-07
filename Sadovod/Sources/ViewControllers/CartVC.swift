@@ -15,6 +15,8 @@ class CartVC: UIViewController {
   fileprivate let collectionViewDataSource = CartCollectionViewDataSource()
   fileprivate let collectionView = CartCollectionView()
   
+  fileprivate let makeOrderButton = BlueRoundedButton(title: "Оформить 8 шт. на 5816 руб.")
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -32,7 +34,7 @@ class CartVC: UIViewController {
   }
   
   fileprivate func addSubviews() {
-    view.addSubview(collectionView)
+    view.addSubviews(collectionView, makeOrderButton)
   }
   
   fileprivate func setupLayout() {
@@ -41,6 +43,13 @@ class CartVC: UIViewController {
                           leading: view.safeAreaLayoutGuide.leadingAnchor,
                           bottom: view.bottomAnchor,
                           trailing: view.safeAreaLayoutGuide.trailingAnchor)
+    
+    makeOrderButton.anchor(top: nil,
+                           leading: view.safeAreaLayoutGuide.leadingAnchor,
+                           bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                           trailing: view.safeAreaLayoutGuide.trailingAnchor,
+                           padding: .init(top: 0, left: 16, bottom: 12, right: 16),
+                           size: .init(width: 0, height: 40))
   }
   
   fileprivate func setupCollectionViewDataSource() {

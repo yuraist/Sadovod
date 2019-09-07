@@ -14,6 +14,7 @@
 		BE151D7D23214086009947A0 /* CategoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7C23214086009947A0 /* CategoriesTableViewDataSource.swift */; };
 		BE2AEA972323B98700270A05 /* Extensions+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */; };
 		BE2AEA992323C4C100270A05 /* SmallGrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */; };
+		BE2AEA9B2323D5BA00270A05 /* BlueRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */; };
 		BE5BCB7E232152AB00BC41D0 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */; };
 		BE5BCB802321538600BC41D0 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */; };
 		BE5BCB822321555100BC41D0 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */; };
@@ -116,6 +117,7 @@
 		BE151D7C23214086009947A0 /* CategoriesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewDataSource.swift; sourceTree = "<group>"; };
 		BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImageView.swift"; sourceTree = "<group>"; };
 		BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGrayButton.swift; sourceTree = "<group>"; };
+		BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueRoundedButton.swift; sourceTree = "<group>"; };
 		BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				BE151D76232123D2009947A0 /* SmallWhiteButton.swift */,
 				BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */,
+				BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */,
 				BE5BCB7D232152AB00BC41D0 /* TextFieldTableViewCell.swift */,
 				BE5BCB7F2321538600BC41D0 /* TextViewTableViewCell.swift */,
 				BE5BCB812321555100BC41D0 /* ButtonTableViewCell.swift */,
@@ -589,6 +592,7 @@
 				BEDCF98023104FA0006BA5AA /* ServerError.swift in Sources */,
 				BE151D77232123D2009947A0 /* SmallWhiteButton.swift in Sources */,
 				BE151D7B2321401F009947A0 /* CategoriesTableView.swift in Sources */,
+				BE2AEA9B2323D5BA00270A05 /* BlueRoundedButton.swift in Sources */,
 				BEF02CB02317C546007B7370 /* UpdateProductInCartResponse.swift in Sources */,
 				BE9DD30C2312CB10007D275C /* JSONSerializer.swift in Sources */,
 				BEAABB302322B8F1008C6CF8 /* CartCollectionViewCell.swift in Sources */,
