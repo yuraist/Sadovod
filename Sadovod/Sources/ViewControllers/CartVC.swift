@@ -24,6 +24,7 @@ class CartVC: UIViewController {
     
     setupCollectionViewDataSource()
     setupCollectionViewDelegate()
+//    fetchCartProducts()
   }
   
   fileprivate func setupNavigationBar() {
@@ -48,6 +49,20 @@ class CartVC: UIViewController {
   
   fileprivate func setupCollectionViewDelegate() {
     collectionView.delegate = self
+  }
+  
+  fileprivate func fetchCartProducts() {
+    APIClient.shared.fetchCart { [weak self] (result) in
+      DispatchQueue.main.async {
+        switch result {
+        case .success(let response):
+          self?.collectionViewDataSource.products = response
+          self?.collectionView.reloadData()
+        case .failure(let error):
+          self?.showErrorAlert(withText: error.message)
+        }
+      }
+    }
   }
 }
 
