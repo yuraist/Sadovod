@@ -8,6 +8,36 @@
 
 import UIKit
 
+class SmallGrayButton: UIButton {
+  
+  init(title: String) {
+    super.init(frame: .zero)
+    
+    setTitle(title.uppercased(), for: .normal)
+    setupAppearance()
+  }
+  
+  init(icon: UIImage) {
+    super.init(frame: .zero)
+    
+    setImage(icon.withRenderingMode(.alwaysTemplate), for: .normal)
+    setupAppearance()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  fileprivate func setupAppearance() {
+    tintColor = Constants.Color.graySubtitle
+    backgroundColor = Constants.Color.grayButton
+    setTitleColor(Constants.Color.graySubtitle, for: .normal)
+    titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+    layer.cornerRadius = 10
+  }
+  
+}
+
 class CartCollectionViewCell: UICollectionViewCell {
   
   static let cellId = "cartCellId"
@@ -56,9 +86,15 @@ class CartCollectionViewCell: UICollectionViewCell {
   
   fileprivate let countLabel: UILabel = {
     let label = UILabel()
+    label.text = "КОЛИЧЕСТВО"
     label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
     return label
   }()
+  
+  let countButton = SmallGrayButton(title: "5")
+  let removeButton = SmallGrayButton(icon: UIImage(named: "Remove")!)
+  
+  fileprivate let infoStackView = UIStackView()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -71,11 +107,9 @@ class CartCollectionViewCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  let infoStackView = UIStackView()
-  
   fileprivate func addSubviews() {
     addSubview(background)
-    background.addSubviews(image, infoStackView)
+    background.addSubviews(image, infoStackView, countLabel, countButton, removeButton)
     
     infoStackView.addArrangedSubview(title)
     infoStackView.addArrangedSubview(priceLabel)
@@ -105,5 +139,19 @@ class CartCollectionViewCell: UICollectionViewCell {
     
     infoStackView.axis = .vertical
     infoStackView.alignment = .leading
+    
+    countButton.anchor(top: nil,
+                       leading: infoStackView.leadingAnchor,
+                       bottom: image.bottomAnchor,
+                       trailing: nil,
+                       padding: .init(top: 0, left: 0, bottom: 0, right: 0),
+                       size: .init(width: 36, height: 32))
+    
+    removeButton.anchor(top: nil,
+                        leading: countButton.trailingAnchor,
+                        bottom: countButton.bottomAnchor,
+                        trailing: nil,
+                        padding: .init(top: 0, left: 8, bottom: 0, right: 0),
+                        size: .init(width: 36, height: 32))
   }
 }
