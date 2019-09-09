@@ -16,6 +16,7 @@ class HomeCollectionView: UICollectionView {
     backgroundColor = .white
     register(HomePopularCategoriesCollectionViewCell.self, forCellWithReuseIdentifier: HomePopularCategoriesCollectionViewCell.cellId)
     register(AuthorizeCollectionViewCell.self, forCellWithReuseIdentifier: AuthorizeCollectionViewCell.cellId)
+    register(UnpaidOrdersCollectionViewCell.self, forCellWithReuseIdentifier: UnpaidOrdersCollectionViewCell.cellId)
   }
   
   required init?(coder aDecoder: NSCoder) {
