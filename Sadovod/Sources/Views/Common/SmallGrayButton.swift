@@ -29,11 +29,11 @@ class SmallGrayButton: UIButton {
   }
   
   fileprivate func setupAppearance() {
-    tintColor = Constants.Color.graySubtitle
+    tintColor = Constants.Color.blue
     backgroundColor = Constants.Color.grayButton
-    setTitleColor(Constants.Color.graySubtitle, for: .normal)
+    setTitleColor(Constants.Color.blue, for: .normal)
     titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-    layer.cornerRadius = 10
+    layer.cornerRadius = 11
   }
   
 }
