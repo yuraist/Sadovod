@@ -66,7 +66,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   }
   
   fileprivate var unpaidOrdersCellSize: CGSize {
-    return CGSize(width: view.frame.width, height: UnpaidOrdersCollectionViewCell.cellHeight)
+    return CGSize(width: view.frame.width, height: HomeUnpaidOrdersCollectionViewCell.cellHeight)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
