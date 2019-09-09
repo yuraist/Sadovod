@@ -15,6 +15,10 @@ class HomeVC: UIViewController {
   let homeCollectionViewDataSource = HomeCollectionViewDataSource()
   let collectionView = HomeCollectionView()
   
+  fileprivate var showUnpaidOrders: Bool {
+    return Token.shared.userIsAuthorized ?? false
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -53,15 +57,38 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    let padding = CGFloat(28)
-    
-    if indexPath.item == 0 {
-      return CGSize(width: view.frame.width, height: HomePopularCategoriesCollectionViewCell.cellHeight + padding)
-    }
-    
-    return CGSize(width: view.frame.width, height: AuthorizeCollectionViewCell.cellHeight + padding)
+  fileprivate var popularCategoriesCellSize: CGSize {
+    return CGSize(width: view.frame.width, height: HomePopularCategoriesCollectionViewCell.cellHeight)
   }
   
+  fileprivate var authorizeCellSize: CGSize {
+    return CGSize(width: view.frame.width, height: AuthorizeCollectionViewCell.cellHeight)
+  }
+  
+  fileprivate var unpaidOrdersCellSize: CGSize {
+    return CGSize(width: view.frame.width, height: UnpaidOrdersCollectionViewCell.cellHeight)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    
+    if indexPath.item == 0 {
+      return popularCategoriesCellSize
+    } else if indexPath.item == 1 {
+      if showUnpaidOrders {
+        return unpaidOrdersCellSize
+      } else {
+        return authorizeCellSize
+      }
+    }
+    
+    return CGSize(width: view.frame.width, height: AuthorizeCollectionViewCell.cellHeight)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 24
+  }
 }
