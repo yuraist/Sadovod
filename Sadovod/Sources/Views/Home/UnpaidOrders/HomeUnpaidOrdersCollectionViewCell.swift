@@ -1,5 +1,5 @@
 //
-//  UnpaidOrdersCollectionViewCell.swift
+//  HomeUnpaidOrdersCollectionViewCell.swift
 //  Sadovod
 //
 //  Created by Yura Istomin on 09/09/2019.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class UnpaidOrdersCollectionViewCell: UICollectionViewCell {
+class HomeUnpaidOrdersCollectionViewCell: UICollectionViewCell {
   
   static let cellId = "unpaidOrdersCellId"
-  static let cellHeight: CGFloat = 268
+  static var cellHeight: CGFloat {
+    return UnpaidOrderCollectionViewCell.cellHeight * 3 + 34
+  }
   
   let title: UILabel = {
     let label = UILabel()
@@ -42,7 +44,8 @@ class UnpaidOrdersCollectionViewCell: UICollectionViewCell {
                  leading: leadingAnchor,
                  bottom: nil,
                  trailing: nil,
-                 padding: .init(top: 0, left: 16, bottom: 0, right: 0))
+                 padding: .init(top: 0, left: 16, bottom: 0, right: 0),
+                 size: .init(width: 0, height: 26))
     
     collectionView.anchor(top: title.bottomAnchor,
                           leading: leadingAnchor,
