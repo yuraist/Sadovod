@@ -10,6 +10,8 @@ import UIKit
 
 class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
   
+  let unpaidOrdersCollectionViewDataSource = UnpaidOrdersCollectionViewDataSource()
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 2
   }
@@ -20,7 +22,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
       return collectionView.dequeueReusableCell(withReuseIdentifier: HomePopularCategoriesCollectionViewCell.cellId, for: indexPath) as! HomePopularCategoriesCollectionViewCell
     } else if indexPath.item == 1 {
       if (Token.shared.userIsAuthorized ?? false) {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: UnpaidOrdersCollectionViewCell.cellId, for: indexPath)
+        return createUnpaidCell(collectionView, forItemAt: indexPath)
       } else {
         return collectionView.dequeueReusableCell(withReuseIdentifier: AuthorizeCollectionViewCell.cellId, for: indexPath)
       }
@@ -28,5 +30,10 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     return collectionView.dequeueReusableCell(withReuseIdentifier: AuthorizeCollectionViewCell.cellId, for: indexPath)
   }
-  
+ 
+  fileprivate func createUnpaidCell(_ collectionView: UICollectionView, forItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeUnpaidOrdersCollectionViewCell.cellId, for: indexPath) as! HomeUnpaidOrdersCollectionViewCell
+    cell.collectionView.dataSource = unpaidOrdersCollectionViewDataSource
+    return cell
+  }
 }
