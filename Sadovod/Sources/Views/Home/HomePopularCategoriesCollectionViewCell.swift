@@ -12,7 +12,7 @@ import ConvenientLayout
 class HomePopularCategoriesCollectionViewCell: UICollectionViewCell {
   
   static let cellId = "homePopularCellId"
-  static let cellHeight: CGFloat = 210
+  static let cellHeight: CGFloat = 238
   
   let title: UILabel = {
     let label = UILabel()

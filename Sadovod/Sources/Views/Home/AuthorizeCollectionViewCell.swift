@@ -11,7 +11,7 @@ import UIKit
 class AuthorizeCollectionViewCell: UICollectionViewCell {
   
   static let cellId = "authorizeCellId"
-  static let cellHeight: CGFloat = 155
+  static let cellHeight: CGFloat = 183
   
   let background: UIView = {
     let view = UIView()
