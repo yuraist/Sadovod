@@ -33,7 +33,7 @@ class SmallGrayButton: UIButton {
     backgroundColor = Constants.Color.grayButton
     setTitleColor(Constants.Color.blue, for: .normal)
     titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-    layer.cornerRadius = 11
+    layer.cornerRadius = 14
   }
   
 }
