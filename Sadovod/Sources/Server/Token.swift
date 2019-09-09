@@ -10,10 +10,12 @@ import Foundation
 
 struct Token: Codable {
   
-  static var shared = Token(catalogKey: "", superKey: nil)
+  static var shared = Token(catalogKey: "", superKey: nil, userIsAuthorized: true)
   
   var catalogKey: String
   var superKey: String?
+  
+  var userIsAuthorized: Bool? = true
   
   enum CodingKeys: String, CodingKey {
     case catalogKey = "catalog_key"
