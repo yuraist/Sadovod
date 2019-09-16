@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09270101EF07E97E0C74AC34 /* Pods_SadovodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23939B3E66E84E5428C2B948 /* Pods_SadovodTests.framework */; };
 		BE151D7523211995009947A0 /* AuthorizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7423211995009947A0 /* AuthorizeCollectionViewCell.swift */; };
 		BE151D77232123D2009947A0 /* SmallWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D76232123D2009947A0 /* SmallWhiteButton.swift */; };
 		BE151D7923213CD1009947A0 /* CatalogCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7823213CD1009947A0 /* CatalogCategoryTableViewCell.swift */; };
 		BE151D7B2321401F009947A0 /* CategoriesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7A2321401F009947A0 /* CategoriesTableView.swift */; };
 		BE151D7D23214086009947A0 /* CategoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE151D7C23214086009947A0 /* CategoriesTableViewDataSource.swift */; };
+		BE1E6DE6232F82B500D817C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E6DE5232F82B500D817C4 /* HomeViewModel.swift */; };
 		BE2AEA972323B98700270A05 /* Extensions+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */; };
 		BE2AEA992323C4C100270A05 /* SmallGrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */; };
 		BE2AEA9B2323D5BA00270A05 /* BlueRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */; };
@@ -78,6 +80,7 @@
 		BEF02CB02317C546007B7370 /* UpdateProductInCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CAF2317C546007B7370 /* UpdateProductInCartResponse.swift */; };
 		BEF02CB22317CAA7007B7370 /* CartSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CB12317CAA7007B7370 /* CartSummary.swift */; };
 		BEF02CB42317CB9B007B7370 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF02CB32317CB9B007B7370 /* CartProduct.swift */; };
+		C3C933E7A5D2F84E5CFE2921 /* Pods_Sadovod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FEC45DEAF2F36B396E98B2 /* Pods_Sadovod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,11 +122,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12E90954B6C0F64C7F0C966D /* Pods-SadovodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadovodTests.debug.xcconfig"; path = "Target Support Files/Pods-SadovodTests/Pods-SadovodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23939B3E66E84E5428C2B948 /* Pods_SadovodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadovodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59FEC45DEAF2F36B396E98B2 /* Pods_Sadovod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sadovod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABB13A1D442D09CF7D61BAC /* Pods-SadovodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadovodTests.release.xcconfig"; path = "Target Support Files/Pods-SadovodTests/Pods-SadovodTests.release.xcconfig"; sourceTree = "<group>"; };
+		9604F818A11D6D4978B4E6C8 /* Pods-Sadovod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sadovod.release.xcconfig"; path = "Target Support Files/Pods-Sadovod/Pods-Sadovod.release.xcconfig"; sourceTree = "<group>"; };
 		BE151D7423211995009947A0 /* AuthorizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE151D76232123D2009947A0 /* SmallWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWhiteButton.swift; sourceTree = "<group>"; };
 		BE151D7823213CD1009947A0 /* CatalogCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		BE151D7A2321401F009947A0 /* CategoriesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableView.swift; sourceTree = "<group>"; };
 		BE151D7C23214086009947A0 /* CategoriesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewDataSource.swift; sourceTree = "<group>"; };
+		BE1E6DE5232F82B500D817C4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BE2AEA962323B98700270A05 /* Extensions+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImageView.swift"; sourceTree = "<group>"; };
 		BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGrayButton.swift; sourceTree = "<group>"; };
 		BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueRoundedButton.swift; sourceTree = "<group>"; };
@@ -193,6 +202,7 @@
 		BEF02CAF2317C546007B7370 /* UpdateProductInCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductInCartResponse.swift; sourceTree = "<group>"; };
 		BEF02CB12317CAA7007B7370 /* CartSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSummary.swift; sourceTree = "<group>"; };
 		BEF02CB32317CB9B007B7370 /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
+		FED7A7D828BC674C4E8737BA /* Pods-Sadovod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sadovod.debug.xcconfig"; path = "Target Support Files/Pods-Sadovod/Pods-Sadovod.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE74F63A231E8A96003AC578 /* ConvenientLayout.framework in Frameworks */,
+				C3C933E7A5D2F84E5CFE2921 /* Pods_Sadovod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,12 +219,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09270101EF07E97E0C74AC34 /* Pods_SadovodTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BB175C74871163E43097352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59FEC45DEAF2F36B396E98B2 /* Pods_Sadovod.framework */,
+				23939B3E66E84E5428C2B948 /* Pods_SadovodTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		353DC042D43635275E8A99DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FED7A7D828BC674C4E8737BA /* Pods-Sadovod.debug.xcconfig */,
+				9604F818A11D6D4978B4E6C8 /* Pods-Sadovod.release.xcconfig */,
+				12E90954B6C0F64C7F0C966D /* Pods-SadovodTests.debug.xcconfig */,
+				8ABB13A1D442D09CF7D61BAC /* Pods-SadovodTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE0933FC231FA975007AB5FE /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +269,14 @@
 				BE4542C923266264006FC7C4 /* UnpaidOrdersCollectionViewDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		BE1E6DE7232F82B900D817C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE1E6DE5232F82B500D817C4 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		BE4542CB23266B77006FC7C4 /* UnpaidOrders */ = {
@@ -386,6 +427,8 @@
 				BEC4952E230E9D2F00625872 /* Sadovod */,
 				BEC49543230E9D3100625872 /* SadovodTests */,
 				BEC4952D230E9D2F00625872 /* Products */,
+				353DC042D43635275E8A99DF /* Pods */,
+				1BB175C74871163E43097352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -454,8 +497,9 @@
 				BEC4954F230E9E3E00625872 /* ApplicationDelegate */,
 				BE8ACFD9230EA0BA0073A017 /* Models */,
 				BE8ACFDA230EA0C50073A017 /* Views */,
-				BE0933FD231FA98A007AB5FE /* DataSources */,
 				BEC49550230E9E4B00625872 /* ViewControllers */,
+				BE1E6DE7232F82B900D817C4 /* ViewModels */,
+				BE0933FD231FA98A007AB5FE /* DataSources */,
 				BE8ACFDD230EB62D0073A017 /* Server */,
 				BE8ACFE0230EB7420073A017 /* Helpers */,
 			);
@@ -493,10 +537,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEC49549230E9D3100625872 /* Build configuration list for PBXNativeTarget "Sadovod" */;
 			buildPhases = (
+				FB3702ABE67CED5CEFC190C8 /* [CP] Check Pods Manifest.lock */,
 				BEC49528230E9D2F00625872 /* Sources */,
 				BEC49529230E9D2F00625872 /* Frameworks */,
 				BEC4952A230E9D2F00625872 /* Resources */,
 				BE74F63E231E8A96003AC578 /* Embed Frameworks */,
+				568721FE9CA716E76A8FDC6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -512,6 +558,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEC4954C230E9D3100625872 /* Build configuration list for PBXNativeTarget "SadovodTests" */;
 			buildPhases = (
+				4B545D6D26CC7D9BE5EE09F9 /* [CP] Check Pods Manifest.lock */,
 				BEC4953C230E9D3100625872 /* Sources */,
 				BEC4953D230E9D3100625872 /* Frameworks */,
 				BEC4953E230E9D3100625872 /* Resources */,
@@ -599,12 +646,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B545D6D26CC7D9BE5EE09F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SadovodTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		568721FE9CA716E76A8FDC6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sadovod/Pods-Sadovod-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sadovod/Pods-Sadovod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB3702ABE67CED5CEFC190C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sadovod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEC49528230E9D2F00625872 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BEF02CA92317BEBB007B7370 /* ProductOption.swift in Sources */,
+				BE1E6DE6232F82B500D817C4 /* HomeViewModel.swift in Sources */,
 				BEDCF97E23104EDF006BA5AA /* Token.swift in Sources */,
 				BE74F642231E8D33003AC578 /* PopularCategoryCollectionView.swift in Sources */,
 				BE5BCB7E232152AB00BC41D0 /* TextFieldTableViewCell.swift in Sources */,
@@ -826,6 +947,7 @@
 		};
 		BEC4954A230E9D3100625872 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED7A7D828BC674C4E8737BA /* Pods-Sadovod.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -847,6 +969,7 @@
 		};
 		BEC4954B230E9D3100625872 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9604F818A11D6D4978B4E6C8 /* Pods-Sadovod.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -868,6 +991,7 @@
 		};
 		BEC4954D230E9D3100625872 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E90954B6C0F64C7F0C966D /* Pods-SadovodTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -889,6 +1013,7 @@
 		};
 		BEC4954E230E9D3100625872 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABB13A1D442D09CF7D61BAC /* Pods-SadovodTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
