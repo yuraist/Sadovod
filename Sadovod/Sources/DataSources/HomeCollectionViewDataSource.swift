@@ -11,6 +11,7 @@ import UIKit
 class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
   
   let unpaidOrdersCollectionViewDataSource = UnpaidOrdersCollectionViewDataSource()
+  var popularCategories = [PopularCategory]()
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 2
@@ -19,7 +20,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     if indexPath.item == 0 {
-      return collectionView.dequeueReusableCell(withReuseIdentifier: HomePopularCategoriesCollectionViewCell.cellId, for: indexPath) as! HomePopularCategoriesCollectionViewCell
+      return createPopularCategoriesCell(collectionView, forItemAt: indexPath)
     } else if indexPath.item == 1 {
       if (Token.shared.userIsAuthorized ?? false) {
         return createUnpaidCell(collectionView, forItemAt: indexPath)
@@ -31,6 +32,12 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     return collectionView.dequeueReusableCell(withReuseIdentifier: AuthorizeCollectionViewCell.cellId, for: indexPath)
   }
  
+  fileprivate func createPopularCategoriesCell(_ collectionView: UICollectionView, forItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePopularCategoriesCollectionViewCell.cellId, for: indexPath) as! HomePopularCategoriesCollectionViewCell
+    (cell.popularCategoriesCollectionView.dataSource as! PopularCategoriesDataSource).categories = popularCategories
+    return cell
+  }
+  
   fileprivate func createUnpaidCell(_ collectionView: UICollectionView, forItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeUnpaidOrdersCollectionViewCell.cellId, for: indexPath) as! HomeUnpaidOrdersCollectionViewCell
     cell.collectionView.dataSource = unpaidOrdersCollectionViewDataSource
