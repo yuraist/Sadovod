@@ -10,7 +10,11 @@ import Foundation
 
 struct Token: Codable {
   
-  static var shared = Token(catalogKey: "", superKey: nil, userIsAuthorized: true)
+  static var shared = Token(catalogKey: "", superKey: nil, userIsAuthorized: true) {
+    didSet {
+      Token.saveToken()
+    }
+  }
   
   var catalogKey: String
   var superKey: String?
@@ -22,4 +26,19 @@ struct Token: Codable {
     case superKey = "super_key"
   }
   
+  static func getStoredToken() -> Token? {
+    if let tokenData = UserDefaults.standard.value(forKey: Constants.tokenStoreKey) as? Data {
+      if let token = try? JSONDecoder().decode(Token.self, from: tokenData) {
+        return token
+      }
+    }
+    
+    return nil
+  }
+ 
+  static func saveToken() {
+    if let encodedToken = try? JSONEncoder().encode(Token.shared) {
+      UserDefaults.standard.set(encodedToken, forKey: Constants.tokenStoreKey)
+    }
+  }
 }
