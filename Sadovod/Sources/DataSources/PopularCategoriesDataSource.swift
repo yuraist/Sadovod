@@ -10,14 +10,7 @@ import UIKit
 
 class PopularCategoriesDataSource: NSObject, UICollectionViewDataSource {
   
-  var categories = [
-    PopularCategory(id: "0", title: "Женщинам", productCount: "63778 товаров", imageName: "Women"),
-    PopularCategory(id: "0", title: "Мужчинам", productCount: "63778 товаров", imageName: "Men"),
-    PopularCategory(id: "0", title: "Детям", productCount: "63778 товаров", imageName: "Kids"),
-    PopularCategory(id: "0", title: "Аксессуары", productCount: "63778 товаров", imageName: "Accessories"),
-    PopularCategory(id: "0", title: "Сумки", productCount: "63778 товаров", imageName: "Bags"),
-    PopularCategory(id: "0", title: "Текстиль", productCount: "63778 товаров", imageName: "Textile")
-  ]
+  var categories = [PopularCategory]()
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return categories.count
