@@ -15,6 +15,8 @@ class HomeVC: UIViewController {
   let homeCollectionViewDataSource = HomeCollectionViewDataSource()
   let collectionView = HomeCollectionView()
   
+  private let viewModel = HomeViewModel()
+  
   fileprivate var showUnpaidOrders: Bool {
     return Token.shared.userIsAuthorized ?? false
   }
@@ -47,6 +49,7 @@ class HomeVC: UIViewController {
   }
   
   fileprivate func setupCollectionViewDataSource() {
+    homeCollectionViewDataSource.popularCategories = viewModel.popularCategories
     collectionView.dataSource = homeCollectionViewDataSource
   }
   
