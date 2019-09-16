@@ -14,6 +14,8 @@ struct Constants {
   static let baseUrl = "tk-sad.ru"
   static let scheme = "https"
   
+  static let tokenStoreKey = "token"
+  
   struct Color {
     static let blue = UIColor(named: "Blue")
     static let paleBlue = UIColor(named: "PaleBlue")
