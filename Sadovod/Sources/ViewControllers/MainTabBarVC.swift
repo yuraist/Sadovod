@@ -14,6 +14,7 @@ class MainTabBarVC: UITabBarController {
     super.viewDidLoad()
     
     setupViewControllers()
+    fetchUserToken()
   }
   
   fileprivate func setupViewControllers() {
@@ -22,6 +23,19 @@ class MainTabBarVC: UITabBarController {
                        CartVC.createNavigationController(withTitle: CartVC.navigationTitle, imageName: "Cart", tag: 2),
                        ProfileVC.createNavigationController(withTitle: ProfileVC.navigationTitle, imageName: "Man", tag: 3),
                        InfoVC.createNavigationController(withTitle: InfoVC.navigationTitle, imageName: "Info", tag: 4)]
+  }
+  
+  private func fetchUserToken() {
+    if let token = Token.getStoredToken() {
+      APIClient.shared.checkToken(catalogKey: token.catalogKey) { (result) in
+        switch result {
+        case .success(let response):
+          Token.shared = response
+        case .failure(let error):
+          print(error.message)
+        }
+      }
+    }
   }
 
 }
