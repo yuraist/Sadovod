@@ -8,9 +8,21 @@
 
 import UIKit
 
-class ProfileVC: UIViewController {
+class ProfileVC: UITableViewController {
   
   static let navigationTitle = "Профиль"
+  
+  class func instantiateFromStoryboard(withTitle title: String, tag: Int, imageName: String) -> UINavigationController {
+    let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+    let profileVC = storyboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileVC
+    let tabBarImage = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
+    let tabBarItem = UITabBarItem(title: title, image: tabBarImage, tag: tag)
+    
+    let navigationController = UINavigationController(rootViewController: profileVC)
+    navigationController.navigationBar.prefersLargeTitles = true
+    navigationController.tabBarItem = tabBarItem
+    return navigationController
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

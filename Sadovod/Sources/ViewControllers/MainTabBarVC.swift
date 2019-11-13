@@ -21,7 +21,7 @@ class MainTabBarVC: UITabBarController {
     viewControllers = [HomeVC.createNavigationController(withTitle: HomeVC.navigationTitle, imageName: "Home", tag: 0),
                        CatalogVC.createNavigationController(withTitle: CatalogVC.navigationTitle, imageName: "Grid", tag: 1),
                        CartVC.createNavigationController(withTitle: CartVC.navigationTitle, imageName: "Cart", tag: 2),
-                       ProfileVC.createNavigationController(withTitle: ProfileVC.navigationTitle, imageName: "Man", tag: 3),
+                       ProfileVC.instantiateFromStoryboard(withTitle: ProfileVC.navigationTitle, tag: 3, imageName: "Man"),
                        InfoVC.createNavigationController(withTitle: InfoVC.navigationTitle, imageName: "Info", tag: 4)]
   }
   
@@ -37,5 +37,4 @@ class MainTabBarVC: UITabBarController {
       }
     }
   }
-
 }
