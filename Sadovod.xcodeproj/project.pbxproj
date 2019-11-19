@@ -18,6 +18,7 @@
 		BE2AEA992323C4C100270A05 /* SmallGrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */; };
 		BE2AEA9B2323D5BA00270A05 /* BlueRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */; };
 		BE408E19237C3396006CE3AB /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE408E18237C3396006CE3AB /* Profile.storyboard */; };
+		BE408E1C237C389F006CE3AB /* Catalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE408E1B237C389F006CE3AB /* Catalog.storyboard */; };
 		BE4542C4232643A9006FC7C4 /* HomeUnpaidOrdersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4542C3232643A9006FC7C4 /* HomeUnpaidOrdersCollectionViewCell.swift */; };
 		BE4542C62326463A006FC7C4 /* UnpaidOrdersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4542C52326463A006FC7C4 /* UnpaidOrdersCollectionView.swift */; };
 		BE4542C823264CCF006FC7C4 /* UnpaidOrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4542C723264CCF006FC7C4 /* UnpaidOrderCollectionViewCell.swift */; };
@@ -138,6 +139,7 @@
 		BE2AEA982323C4C100270A05 /* SmallGrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGrayButton.swift; sourceTree = "<group>"; };
 		BE2AEA9A2323D5BA00270A05 /* BlueRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueRoundedButton.swift; sourceTree = "<group>"; };
 		BE408E18237C3396006CE3AB /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		BE408E1B237C389F006CE3AB /* Catalog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalog.storyboard; sourceTree = "<group>"; };
 		BE4542C3232643A9006FC7C4 /* HomeUnpaidOrdersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUnpaidOrdersCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE4542C52326463A006FC7C4 /* UnpaidOrdersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpaidOrdersCollectionView.swift; sourceTree = "<group>"; };
 		BE4542C723264CCF006FC7C4 /* UnpaidOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpaidOrderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -280,14 +282,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		BE408E1A237C339D006CE3AB /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				BE408E18237C3396006CE3AB /* Profile.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 		BE4542CB23266B77006FC7C4 /* UnpaidOrders */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +346,8 @@
 		BE8ACFD8230EA0610073A017 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				BE408E18237C3396006CE3AB /* Profile.storyboard */,
+				BE408E1B237C389F006CE3AB /* Catalog.storyboard */,
 				BEC49538230E9D3100625872 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -453,7 +449,6 @@
 		BEC4952E230E9D2F00625872 /* Sadovod */ = {
 			isa = PBXGroup;
 			children = (
-				BE408E1A237C339D006CE3AB /* Storyboards */,
 				BEC49552230E9E7200625872 /* Sources */,
 				BEC49551230E9E5600625872 /* Resources */,
 			);
@@ -642,6 +637,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE408E1C237C389F006CE3AB /* Catalog.storyboard in Resources */,
 				BE408E19237C3396006CE3AB /* Profile.storyboard in Resources */,
 				BEC4953A230E9D3100625872 /* LaunchScreen.storyboard in Resources */,
 				BEC49537230E9D3100625872 /* Assets.xcassets in Resources */,

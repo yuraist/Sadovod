@@ -27,9 +27,14 @@ class ProfileVC: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupTableView()
     setupNavigationBar()
     addSubviews()
     setupLayout()
+  }
+  
+  private func setupTableView() {
+    tableView.keyboardDismissMode = .onDrag
   }
   
   fileprivate func setupNavigationBar() {
